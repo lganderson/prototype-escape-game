@@ -17,6 +17,8 @@ public:
 	// Sets default values for this component's properties
 	UOpenDoor();
 
+	float GetTotalMassOfActorsOnPlate();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -35,7 +37,8 @@ private:
 	UPROPERTY(EditAnywhere)
 	ATriggerVolume* PressurePlate;
 
-	AActor* ActorThatOpens;
+	UPROPERTY(EditAnywhere)
+	float ActivationMass = 30.f;
 
 	UPROPERTY(EditAnywhere)
 	float DoorCloseDelay = 1.f;
