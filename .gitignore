@@ -7,3 +7,7 @@ BuildingEscape/Content/StarterContent/
 
 # VS Generated Files
 BuildingEscape/.vs/
+*.VC.db
+*.suo
+*.VC.opendb
+*.sln

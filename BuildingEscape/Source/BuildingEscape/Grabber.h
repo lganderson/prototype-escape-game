@@ -22,6 +22,10 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	void SetupInputComponent();
+
+	void FindPhysicsHandleComponent();
+
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -39,4 +43,13 @@ private:
 
 	// Release grabbed object
 	void Release();
+
+	// Returns the current start of the reach line
+	FVector GetReachLineStart();
+
+	// Returns the current end of the reach line
+	FVector GetReachLineEnd();
+
+	// Return hit for the first physics body in reach
+	const FHitResult GetFirstPhysicsBodyInReach();
 };
